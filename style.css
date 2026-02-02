@@ -1,114 +1,100 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-    line-height: 1.7;
-    color: #333;
+  color: #333;
+  line-height: 1.7;
 }
 
 .hero {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
 }
 
 .profile-img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 4px solid #fff;
-    margin-bottom: 20px;
-    object-fit: cover;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 20px;
+  object-fit: cover;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
-.hero h2 {
-    font-weight: 400;
-    margin: 10px 0;
-}
-
-.hero-buttons {
-    margin-top: 25px;
+.buttons {
+  margin-top: 25px;
 }
 
 .btn {
-    background: #00c6ff;
-    color: #000;
-    padding: 12px 22px;
-    margin: 5px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
+  padding: 12px 24px;
+  background: #00c6ff;
+  color: #000;
+  border-radius: 30px;
+  text-decoration: none;
+  margin: 5px;
+  font-weight: 600;
 }
 
-.btn-outline {
-    background: transparent;
-    border: 2px solid #00c6ff;
-    color: #00c6ff;
+.outline {
+  background: transparent;
+  border: 2px solid #00c6ff;
+  color: #00c6ff;
 }
 
 .section {
-    padding: 60px 10%;
-}
-
-.section h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+  padding: 60px 10%;
 }
 
 .gray {
-    background: #f5f7fa;
+  background: #f4f6f9;
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
 }
 
-.skill-card {
-    background: white;
-    padding: 15px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+.card {
+  background: #fff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.timeline-item {
-    margin-bottom: 30px;
+.experience {
+  margin-bottom: 30px;
 }
 
-.timeline-item h4 {
-    font-size: 1.2rem;
+.list {
+  padding-left: 20px;
 }
 
-.timeline-item span {
-    color: #777;
-    font-size: 0.9rem;
+.subtitle {
+  margin-top: 10px;
+  opacity: 0.9;
 }
 
-.timeline-item ul {
-    margin-top: 10px;
-    padding-left: 20px;
+.typing::after {
+  content: "|";
+  margin-left: 5px;
+  animation: blink 1s infinite;
 }
 
-.cert-list {
-    list-style: square;
-    padding-left: 20px;
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
 }
 
 footer {
-    background: #0f2027;
-    color: white;
-    text-align: center;
-    padding: 20px;
+  background: #0f2027;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
 }
