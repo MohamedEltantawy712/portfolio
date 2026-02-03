@@ -7,7 +7,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-// Typing Animation
+// Typing animation
 const titles = [
   "Industrial Automation Engineer",
   "PLC & SCADA Engineer",
@@ -17,32 +17,30 @@ const titles = [
 ];
 
 let index = 0;
-let charIndex = 0;
-let currentText = "";
-let isDeleting = false;
+let char = 0;
+let deleting = false;
+const el = document.querySelector(".typing");
 
-const typingElement = document.querySelector(".typing");
+function type() {
+  if (!el) return;
 
-function typeEffect() {
-  if (!typingElement) return;
+  el.textContent = titles[index].substring(0, char);
 
-  if (!isDeleting && charIndex < titles[index].length) {
-    currentText += titles[index][charIndex++];
-  } else if (isDeleting && charIndex > 0) {
-    currentText = currentText.slice(0, -1);
-    charIndex--;
+  if (!deleting) {
+    char++;
+    if (char === titles[index].length) {
+      deleting = true;
+      setTimeout(() => {}, 1200);
+    }
+  } else {
+    char--;
+    if (char === 0) {
+      deleting = false;
+      index = (index + 1) % titles.length;
+    }
   }
 
-  typingElement.textContent = currentText;
-
-  if (!isDeleting && charIndex === titles[index].length) {
-    setTimeout(() => isDeleting = true, 1500);
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    index = (index + 1) % titles.length;
-  }
-
-  setTimeout(typeEffect, isDeleting ? 60 : 100);
+  setTimeout(type, deleting ? 60 : 100);
 }
 
-typeEffect();
+type();
