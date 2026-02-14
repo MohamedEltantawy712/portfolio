@@ -1,145 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title id="docTitle">Mohamed Gamal Eltantawi — Industrial Automation Engineer</title>
+  <meta name="description" content="Industrial Automation Engineer specializing in Siemens PCS 7, S7-1500, WinCC, ICSS/SCMS, IEC 61850. Oil & Gas · Steel · Cement. FAT/IFAT/SAT · Commissioning." />
 
-  <title>Mohamed Eltantawi | Industrial Automation Engineer</title>
+  <!-- Fonts (optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <!-- ATS / Recruiter Keywords -->
-  <meta name="keywords" content="
-  Industrial Automation Engineer,
-  PLC Engineer,
-  SCADA Engineer,
-  DCS Engineer,
-  Siemens PCS 7,
-  Siemens PLC,
-  S7-1500,
-  S7-400,
-  ET200SP,
-  WinCC,
-  Ignition SCADA,
-  AVEVA SCADA,
-  ICSS,
-  SCMS,
-  FAT IFAT SAT,
-  Commissioning Engineer,
-  Oil and Gas Automation,
-  IIoT Engineer,
-  Node-RED,
-  OPC UA,
-  MQTT,
-  Control Systems Engineer,
-  Automation Engineer UAE
-  ">
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
 
-  <meta name="description" content="Industrial Automation Engineer specializing in PLC, SCADA, DCS, PCS 7, Oil & Gas automation, FAT, IFAT, SAT, commissioning, and IIoT solutions.">
-
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Main script -->
+  <script defer src="script.js"></script>
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<nav>
-  <h2>Mohamed Eltantawi</h2>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+  <!-- Header -->
+  <header class="site-header" id="home">
+    <!-- 🔒 Only this top bar is sticky; hero is NOT sticky -->
+    <div class="topbar">
+      <nav class="nav container" aria-label="Main">
+        <a class="brand" href="#home">
+          <span class="brand-mark">ME</span>
+          <span class="brand-text">Mohamed G. Eltantawi</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="navMenu" title="Menu">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <ul id="navMenu" class="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#certs">Certs</a></li>
+          <li class="nav-actions">
+            <button id="themeToggle" class="btn btn-icon" title="Toggle theme" aria-label="Toggle theme">☀️</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
-<header class="hero">
-  <img src="assets/profile.jpg" alt="Mohamed Eltantawi" class="profile-img">
+    <!-- Hero (not sticky) -->
+    <section class="hero container">
+      <div class="hero-text">
+        <!-- Dynamic job title -->
+        <h1 id="heroTitle">Industrial Automation Engineer</h1>
+        <p class="lead">
+          PLC · SCADA · DCS (PCS 7, S7–1500, WinCC, Ignition, AVEVA).
+          ICSS/SCMS, FAT/IFAT/SAT, commissioning. Oil & Gas, Steel & Cement.
+          Multicultural project delivery.
+        </p>
+        <!-- Hero CTAs (kept only here) -->
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#contact">Hire me</a>
+          <a class="btn btn-soft" href="https://www.linkedin.com/in/mohamed-eltantawi-426106238" target="_blank" rel="noopener">LinkedIn</a>
+          <a id="downloadCvHero" class="btn btn-outline" href="assets/Mohamed-Gamal-Eltantawi-CV.pdf" download>Download CV</a>
+        </div>
+        <ul class="quick-facts">
+          <li>Based in Cairo, Egypt</li>
+          <li>Arabic (Native) · English (B2)</li>
+          <li>Available for onsite/remote</li>
+        </ul>
+      </div>
+      <div class="hero-media">
+        <img src="assets/me.jpg" alt="Profile photo" />
+      </div>
+    </section>
+  </header>
 
-  <h1>Mohamed Gamal Eltantawi</h1>
-  <h2 class="typing"></h2>
-  <p class="subtitle">PLC • SCADA • DCS  • IIoT</p>
+  <main id="main">
+    <section id="about" class="section container reveal">
+      <h2>About</h2>
+      <p id="aboutText"></p>
+      <ul class="highlights" id="aboutHighlights"></ul>
+    </section>
 
-  <div class="buttons">
-    <a href="assets/Mohamed_Eltantawi_CV.pdf" download class="btn">Download CV</a>
-    <a href="#contact" class="btn outline">Contact</a>
-  </div>
-</header>
+    <section id="experience" class="section container reveal">
+      <h2>Experience</h2>
+      <div class="timeline" id="experienceTimeline"></div>
+    </section>
 
-<section id="about">
-  <h3>About Me</h3>
-  <p>
-    Industrial Automation Engineer with hands-on expertise in Siemens PCS7, TIA Portal, WinCC
-    and SCADA systems, across cement, steel, and oil & gas projects. Experienced in system
-    commissioning and advanced HMI/SCADA development, with proven success in real-time
-    industrial automation. Skilled in PLC, DCS, and industrial networking, combining technical
-    depth with practical field experience. Strong background in commissioning projects, ensuring
-    compliance, reliability, and innovation.
-  </p>
-</section>
+    <section id="projects" class="section container reveal">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <div class="filters" id="caseFilters" aria-label="Filter projects"></div>
+      </div>
+      <div class="card-grid" id="caseGrid"></div>
+    </section>
 
-<section class="section gray">
-  <h3>Technical Skills</h3>
-  <div class="grid">
-    <div class="card">Siemens PCS 7</div>
-    <div class="card">PLC (S7-1500 / S7-400 / ET200SP)</div>
-    <div class="card">WinCC (Explorer, Professional, Unified)</div>
-    <div class="card">Ignition & AVEVA SCADA</div>
-    <div class="card">OPC-UA / MQTT / Node-RED</div>
-    <div class="card">PROFINET / PROFIBUS / Modbus</div>
-  </div>
-</section>
+    <section id="skills" class="section container reveal">
+      <h2>Skills</h2>
+      <div class="skill-groups" id="skillGroups"></div>
+    </section>
 
-<section id="experience">
-  <h3>Professional Experience</h3>
+    <section id="education" class="section container reveal">
+      <h2>Education</h2>
+      <div id="educationContent"></div>
+    </section>
 
-  <div class="job">
-    <h4>Automation Engineer – Siemens Energy (UAE)</h4>
-    <span>Apr 2025 – Present | Salt Dome Project (Oil & Gas)</span>
-    <ul>
-      <li>Designed control logic using Siemens PCS 7</li>
-      <li>Participated in FAT, IFAT, SAT & commissioning</li>
-      <li>ICSS & SCMS Engineer roles</li>
-      <li>LV Switchgear data integration</li>
-      <li>Site Surveys at SHAH, HABSHAN and ASAB Facilities</li>
-    </ul>
-  </div>
+    <section id="certs" class="section container reveal">
+      <h2>Training & Certifications</h2>
+      <!-- stays a UL; JS now renders each certificate inside <li> for vertical stacking -->
+      <ul class="list" id="certList"></ul>
+    </section>
 
-  <div class="job">
-    <h4>Automation Engineer – Imhosys</h4>
-    <span>Sep 2024 – Present</span>
-    <ul>
-      <li>Sinai Cement Grey Plant – PCS7 Upgrade Project</li>
-      <li>Zinc Oxide Production Plant – EAFD Recycling</li>
-      <li>Sococim Plant – Cement Plant Project, Rufisque, Senegal</li>
-      <li>FAT, IFAT, SAT support</li>
-    </ul>
-  </div>
-</section>
+    <!-- CONTACT: form only (links moved to footer) -->
+    <section id="contact" class="section container reveal">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <form class="contact-form" aria-label="Contact form" onsubmit="return false;">
+          <label>
+            <span>Name</span>
+            <input type="text" id="cfName" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" id="cfEmail" required />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea id="cfMessage" rows="5" required></textarea>
+          </label>
+          <button class="btn btn-primary" id="cfSend">Send</button>
+          <p id="cfStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
 
-<section id="education" class="gray">
-  <h3>Education</h3>
-  <p><strong>B.Sc. Electrical Engineering</strong> – Mansoura University (2024)</p>
-  <p>Grade: Very Good (82.86%)</p>
-  <p>Graduation Project: Smart Power Distribution Grid (Excellent)</p>
-</section>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Mohamed Gamal Eltantawi — <span id="footerTitle">Industrial Automation Engineer</span></p>
 
-<section id="contact">
-  <h3>Contact</h3>
-  <p>Email: mohamedeltantawy024@gmail.com</p>
-  <p>Phone: +971 50 310 9276 | +20 101 139 2374</p>
-  <p>
-    LinkedIn:
-    <a href="https://www.linkedin.com/in/mohamed-eltantawi-426106238?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BHcMWzADgS8mbG4pIv1c2eg%3D%3D" target="_blank">
-      Mohamed Eltantawi
-    </a>
-  </p>
-</section>
+      <!-- Footer contact with icons -->
+      <ul class="contact-list footer-contact" aria-label="Footer contact">
+        <li>
+          <!-- Mail icon -->
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/>
+          </svg>
+          <a href="mailto:mohamedeltantawy024@gmail.com">mohamedeltantawy024@gmail.com</a>
+        </li>
+        <li>
+          <!-- Phone icon -->
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.11.37 2.31.57 3.58.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.3 22 2 13.7 2 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.27.2 2.47.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2Z"/>
+          </svg>
+          <a href="tel:+201011392374">+20 101 139 2374</a>
+        </li>
+        <li>
+          <!-- LinkedIn icon -->
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M6.94 6.94A2.94 2.94 0 1 1 6.93 1a2.94 2.94 0 0 1 .01 5.94ZM3 8.47h5.9V21H3zM14.16 8.47c-3.26 0-5.46 2.13-5.46 5.45V21h5.9v-5.71c0-1.51.9-2.94 2.67-2.94 1.7 0 2.48 1.33 2.48 3.03V21H25v-6.71c0-4.08-2.18-5.82-5.29-5.82-2.45 0-3.53 1.36-4.09 2.32h-.06V8.47h-1.4Z"/>
+          </svg>
+          <a href="https://www.linkedin.com/in/mohamed-eltantawi-426106238" target="_blank" rel="noopener">LinkedIn</a>
+        </li>
+      </ul>
 
-<footer>
-  <p>© 2026 Mohamed Gamal Eltantawi</p>
-</footer>
+      <p class="small">Built with Siemens‑inspired colors. Not affiliated with Siemens.</p>
+    </div>
+  </footer>
 
-<script src="script.js"></script>
+  <!-- SEO: Person schema -->
+  <script type="application/ld+json" id="jsonld"></script>
 </body>
 </html>
-
